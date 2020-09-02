@@ -1,0 +1,48 @@
+// @desc    Get all bootcamps
+// @route   GET /api/v1/bootcamps
+// @access  Public
+exports.getBootcamps = (req, res, next) => {
+  res.status(200).json({ success: true, msg: 'Show all bootcamps' });
+  next();
+};
+
+// @desc    Get a bootcamp
+// @route   GET /api/v1/bootcamps/:id
+// @access  Public
+exports.getBootcamp = (req, res, next) => {
+  res
+    .status(200)
+    .json({
+      success: true,
+      msg: `Show more info about bootcamp ${req.params.id}`,
+    });
+  next();
+};
+
+// @desc    Create a new bootcamp
+// @route   POST /api/v1/bootcamps/
+// @access  Private
+exports.createBootcamp = (req, res, next) => {
+  res.status(200).json({ success: true, msg: 'Create a new bootcamp' });
+  next();
+};
+
+// @desc    Update an existing bootcamp
+// @route   PUT /api/v1/bootcamps/:id
+// @access  Private
+exports.updateBootcamp = (req, res, next) => {
+  res
+    .status(200)
+    .json({ success: true, msg: `Update bootcamp ${req.params.id}` });
+  next();
+};
+
+// @desc    Delete a bootcamp
+// @route   DELETE /api/v1/bootcamps/:id
+// @access  Private
+exports.deleteBootcamp = (req, res, next) => {
+  res
+    .status(200)
+    .json({ success: true, msg: `Delete bootcamp ${req.params.id}` });
+  next();
+};
