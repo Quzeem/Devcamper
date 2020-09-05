@@ -1,2 +1,6 @@
 node_modules/
 config/config.env
+APIendpoints.txt
+_data/
+devcamper_specs.md
+links.md

@@ -12,6 +12,7 @@
   "rules": {
     "no-console": "off",
     "comma-dangle": "off",
+    "no-useless-escape": "off",
     "linebreak-style": ["warn", "windows"]
   }
 }
