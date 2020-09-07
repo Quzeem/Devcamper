@@ -13,6 +13,8 @@
     "no-console": "off",
     "comma-dangle": "off",
     "no-useless-escape": "off",
+    "consistent-return": "off",
+    "max-len": "off",
     "linebreak-style": ["warn", "windows"]
   }
 }
