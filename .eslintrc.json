@@ -14,6 +14,8 @@
     "comma-dangle": "off",
     "no-useless-escape": "off",
     "consistent-return": "off",
+    "func-names": "off",
+    "prefer-arrow-callback": "off",
     "max-len": "off",
     "linebreak-style": ["warn", "windows"]
   }
