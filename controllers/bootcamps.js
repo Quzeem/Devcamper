@@ -133,7 +133,7 @@ exports.getBootcampsWithinRadius = asyncHandler(async (req, res, next) => {
   // For our distance(d), we're assuming it's in miles.
   const radius = distance / 3963;
 
-  // Get bootcamps within the radius calculated from tdistancehe specified
+  // Get bootcamps within the radius calculated from the distance specified
   const bootcamps = await Bootcamp.find({
     location: { $geoWithin: { $centerSphere: [[long, lat], radius] } },
   });

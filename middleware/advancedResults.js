@@ -15,7 +15,7 @@ const advancedResults = (model, populate) => async (req, res, next) => {
   );
 
   // Finding resource
-  query = model.find(JSON.parse(queryStr)).populate('courses');
+  query = model.find(JSON.parse(queryStr));
 
   // Select Fields from document(s) --- Bootcamp.find().select()
   if (req.query.select) {

@@ -135,7 +135,6 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
     // send response
     res.status(200).json({ success: true, data: 'Email sent' });
   } catch (err) {
-    console.log(err);
     user.resetPasswordToken = undefined;
     user.resetPasswordExpire = undefined;
 
@@ -174,7 +173,7 @@ exports.resetPassword = asyncHandler(async (req, res, next) => {
   sendTokenResponse(user, 200, res);
 });
 
-// Custom function which gets token from a user model(document), create cookie, and send response
+// Custom function which sets token for a user, put the token in a cookie, and send a response
 const sendTokenResponse = (user, statusCode, res) => {
   // Create token
   const token = user.getSignedJwtToken();
