@@ -15,7 +15,7 @@ const errorHandler = (err, req, res, next) => {
   // check for error type to set a specific response message and status code
   // Mongoose bad ObjectId -- CastError
   if (err.name === 'CastError') {
-    const message = `Resource with the id of ${err.value} not found`;
+    const message = 'Resource not found';
     // assign the instance(object) of custom ErrorResponse Class Constructor to error object variable
     error = new ErrorResponse(message, 404); // error object
     // console.log(error);
